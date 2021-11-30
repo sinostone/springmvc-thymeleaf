@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+</head>
+<body>
+<h1>首页</h1>
+<img src="static/img/frog.jpg"/>
+<form th:action="@{/testModelAndView}" method="post">
+  用户名：<input type="text" name="username"/><br/>
+  邮 箱：<input type="text" name="email"/><br/>
+  爱 好：<input type="checkbox" name="hobby" value="电影" />电影
+        <input type="checkbox" name="hobby" value="音乐" />音乐
+        <input type="checkbox" name="hobby" value="游戏" />游戏
+  <input type="submit">
+</form>
+
+<a th:href="@{/testModelAndView}">测试ModelAndView</a><br/>
+<a th:href="@{/testForward}">测试Forward</a><br/>
+<a th:href="@{/user}">查看所有用户信息</a>
+</body>
+</html>
